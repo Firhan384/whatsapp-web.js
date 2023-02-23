@@ -390,7 +390,7 @@ class Message extends Base {
                 return undefined;
             }
             
-            if (!mes.mediaData.hasOwnProperty('mediaStage')) {
+            if (!msg.mediaData.hasOwnProperty('mediaStage')) {
                 return undefined;
             }
             
