@@ -389,6 +389,11 @@ class Message extends Base {
             if (!msg) {
                 return undefined;
             }
+            
+            if (!mes.mediaData.hasOwnProperty('mediaStage')) {
+                return undefined;
+            }
+            
             if (msg.mediaData.mediaStage != 'RESOLVED') {
                 // try to resolve media
                 await msg.downloadMedia({
